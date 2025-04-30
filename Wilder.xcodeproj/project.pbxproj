@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B0345AD2B86FA09008B375B /* WGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0345AC2B86FA09008B375B /* WGView.swift */; };
+		3B05956D2B84388C00DDC265 /* MatchingGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05956C2B84388C00DDC265 /* MatchingGameModel.swift */; };
+		3B05956F2B84389300DDC265 /* AnimalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B05956E2B84389300DDC265 /* AnimalCardView.swift */; };
+		3B0595712B8438AE00DDC265 /* MatchingGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0595702B8438AE00DDC265 /* MatchingGameView.swift */; };
+		3B4F367E2B74811200B5C1B8 /* SpotlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4F367D2B74811200B5C1B8 /* SpotlightDetailView.swift */; };
+		3B4F36802B74818100B5C1B8 /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4F367F2B74818100B5C1B8 /* AnimalViewModel.swift */; };
+		3B58244E2B845121006DCF25 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B58244D2B845120006DCF25 /* CoreAudio.framework */; };
+		3B5824522B84512F006DCF25 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5824502B84512F006DCF25 /* CoreAudioKit.framework */; };
+		3B64EB9D2B71BCA000A8BF5B /* WilderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64EB9C2B71BCA000A8BF5B /* WilderApp.swift */; };
+		3B64EB9F2B71BCA000A8BF5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64EB9E2B71BCA000A8BF5B /* ContentView.swift */; };
+		3B64EBA32B71BCA200A8BF5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B64EBA22B71BCA200A8BF5B /* Assets.xcassets */; };
+		3B64EBB12B71BCA200A8BF5B /* WilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64EBB02B71BCA200A8BF5B /* WilderTests.swift */; };
+		3B64EBBB2B71BDFF00A8BF5B /* SpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64EBBA2B71BDFF00A8BF5B /* SpotlightView.swift */; };
+		3B64EBBD2B71BE0A00A8BF5B /* ConservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64EBBC2B71BE0A00A8BF5B /* ConservationsView.swift */; };
+		3B64EBC12B71BFEC00A8BF5B /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B64EBC02B71BFEC00A8BF5B /* AnimalModel.swift */; };
+		3B66A85B2B7486CF0056FBE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B66A8592B7486CF0056FBE9 /* Preview Assets.xcassets */; };
+		3B6C0F612B75F43D00CAF7B4 /* WGDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6C0F602B75F43D00CAF7B4 /* WGDetailView.swift */; };
+		3B879B832B7686F500C62C47 /* ConservationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B879B822B7686F500C62C47 /* ConservationsModel.swift */; };
+		3B879B862B76870200C62C47 /* ConservationsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B879B852B76870200C62C47 /* ConservationsData.swift */; };
+		3BBF11F72B8860A50041BF4F /* bearsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F02B8860A40041BF4F /* bearsound.mp3 */; };
+		3BBF11F82B8860A50041BF4F /* jaguarsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F12B8860A40041BF4F /* jaguarsound.mp3 */; };
+		3BBF11F92B8860A50041BF4F /* orangutan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F22B8860A40041BF4F /* orangutan.mp3 */; };
+		3BBF11FA2B8860A50041BF4F /* servalsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F32B8860A40041BF4F /* servalsound.mp3 */; };
+		3BBF11FB2B8860A50041BF4F /* orangutansound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F42B8860A50041BF4F /* orangutansound.mp3 */; };
+		3BBF11FC2B8860A50041BF4F /* elephantsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F52B8860A50041BF4F /* elephantsound.mp3 */; };
+		3BBF11FD2B8860A50041BF4F /* lionsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3BBF11F62B8860A50041BF4F /* lionsound.mp3 */; };
+		3BD497D52B733660007B1B2C /* AnimalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD497D42B733660007B1B2C /* AnimalData.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B64EBAD2B71BCA200A8BF5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B64EB8D2B71BCA000A8BF5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B64EB942B71BCA000A8BF5B;
+			remoteInfo = EcoSphere;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B0345AC2B86FA09008B375B /* WGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGView.swift; sourceTree = "<group>"; };
+		3B05956C2B84388C00DDC265 /* MatchingGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameModel.swift; sourceTree = "<group>"; };
+		3B05956E2B84389300DDC265 /* AnimalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCardView.swift; sourceTree = "<group>"; };
+		3B0595702B8438AE00DDC265 /* MatchingGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingGameView.swift; sourceTree = "<group>"; };
+		3B4F367D2B74811200B5C1B8 /* SpotlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightDetailView.swift; sourceTree = "<group>"; };
+		3B4F367F2B74818100B5C1B8 /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
+		3B58244D2B845120006DCF25 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		3B58244F2B84512F006DCF25 /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
+		3B5824502B84512F006DCF25 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		3B64EB952B71BCA000A8BF5B /* Wilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B64EB9C2B71BCA000A8BF5B /* WilderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WilderApp.swift; sourceTree = "<group>"; };
+		3B64EB9E2B71BCA000A8BF5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B64EBA22B71BCA200A8BF5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B64EBAC2B71BCA200A8BF5B /* WilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B64EBB02B71BCA200A8BF5B /* WilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WilderTests.swift; sourceTree = "<group>"; };
+		3B64EBBA2B71BDFF00A8BF5B /* SpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightView.swift; sourceTree = "<group>"; };
+		3B64EBBC2B71BE0A00A8BF5B /* ConservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsView.swift; sourceTree = "<group>"; };
+		3B64EBC02B71BFEC00A8BF5B /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		3B66A8592B7486CF0056FBE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B66A85C2B7487930056FBE9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		3B6C0F602B75F43D00CAF7B4 /* WGDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGDetailView.swift; sourceTree = "<group>"; };
+		3B879B822B7686F500C62C47 /* ConservationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsModel.swift; sourceTree = "<group>"; };
+		3B879B852B76870200C62C47 /* ConservationsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConservationsData.swift; sourceTree = "<group>"; };
+		3BBF11F02B8860A40041BF4F /* bearsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bearsound.mp3; sourceTree = "<group>"; };
+		3BBF11F12B8860A40041BF4F /* jaguarsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jaguarsound.mp3; sourceTree = "<group>"; };
+		3BBF11F22B8860A40041BF4F /* orangutan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = orangutan.mp3; sourceTree = "<group>"; };
+		3BBF11F32B8860A40041BF4F /* servalsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = servalsound.mp3; sourceTree = "<group>"; };
+		3BBF11F42B8860A50041BF4F /* orangutansound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = orangutansound.mp3; sourceTree = "<group>"; };
+		3BBF11F52B8860A50041BF4F /* elephantsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = elephantsound.mp3; sourceTree = "<group>"; };
+		3BBF11F62B8860A50041BF4F /* lionsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lionsound.mp3; sourceTree = "<group>"; };
+		3BD497D42B733660007B1B2C /* AnimalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalData.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B64EB922B71BCA000A8BF5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B5824522B84512F006DCF25 /* CoreAudioKit.framework in Frameworks */,
+				3B58244E2B845121006DCF25 /* CoreAudio.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B64EBA92B71BCA200A8BF5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B05956B2B84386300DDC265 /* TAB4 - Match Up */ = {
+			isa = PBXGroup;
+			children = (
+				3B0595702B8438AE00DDC265 /* MatchingGameView.swift */,
+				3B05956C2B84388C00DDC265 /* MatchingGameModel.swift */,
+				3B05956E2B84389300DDC265 /* AnimalCardView.swift */,
+			);
+			path = "TAB4 - Match Up";
+			sourceTree = "<group>";
+		};
+		3B4F36752B747D7900B5C1B8 /* TAB2 - Wild Guide */ = {
+			isa = PBXGroup;
+			children = (
+				3B0345AC2B86FA09008B375B /* WGView.swift */,
+				3B6C0F602B75F43D00CAF7B4 /* WGDetailView.swift */,
+				3B4F367F2B74818100B5C1B8 /* AnimalViewModel.swift */,
+			);
+			path = "TAB2 - Wild Guide";
+			sourceTree = "<group>";
+		};
+		3B4F36782B747F4000B5C1B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EBA22B71BCA200A8BF5B /* Assets.xcassets */,
+				3B4F36812B74849000B5C1B8 /* Sounds */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3B4F36792B747F5200B5C1B8 /* TAB3 - Conservations */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EBBC2B71BE0A00A8BF5B /* ConservationsView.swift */,
+				3B879B822B7686F500C62C47 /* ConservationsModel.swift */,
+				3B879B852B76870200C62C47 /* ConservationsData.swift */,
+			);
+			path = "TAB3 - Conservations";
+			sourceTree = "<group>";
+		};
+		3B4F36812B74849000B5C1B8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3BBF11F02B8860A40041BF4F /* bearsound.mp3 */,
+				3BBF11F52B8860A50041BF4F /* elephantsound.mp3 */,
+				3BBF11F12B8860A40041BF4F /* jaguarsound.mp3 */,
+				3BBF11F62B8860A50041BF4F /* lionsound.mp3 */,
+				3BBF11F22B8860A40041BF4F /* orangutan.mp3 */,
+				3BBF11F42B8860A50041BF4F /* orangutansound.mp3 */,
+				3BBF11F32B8860A40041BF4F /* servalsound.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		3B58244C2B845120006DCF25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B5824502B84512F006DCF25 /* CoreAudioKit.framework */,
+				3B58244F2B84512F006DCF25 /* CoreAudioTypes.framework */,
+				3B58244D2B845120006DCF25 /* CoreAudio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B64EB8C2B71BCA000A8BF5B = {
+			isa = PBXGroup;
+			children = (
+				3B64EB972B71BCA000A8BF5B /* Wilder */,
+				3B64EBAF2B71BCA200A8BF5B /* WilderTests */,
+				3B64EB962B71BCA000A8BF5B /* Products */,
+				3B58244C2B845120006DCF25 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3B64EB962B71BCA000A8BF5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EB952B71BCA000A8BF5B /* Wilder.app */,
+				3B64EBAC2B71BCA200A8BF5B /* WilderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B64EB972B71BCA000A8BF5B /* Wilder */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EB9C2B71BCA000A8BF5B /* WilderApp.swift */,
+				3B64EB9E2B71BCA000A8BF5B /* ContentView.swift */,
+				3B6C0F622B75F5A200CAF7B4 /* Animals */,
+				3BD497D32B73360F007B1B2C /* TAB1 - Spotlight */,
+				3B4F36752B747D7900B5C1B8 /* TAB2 - Wild Guide */,
+				3B4F36792B747F5200B5C1B8 /* TAB3 - Conservations */,
+				3B05956B2B84386300DDC265 /* TAB4 - Match Up */,
+				3B4F36782B747F4000B5C1B8 /* Resources */,
+				3B66A85C2B7487930056FBE9 /* Info.plist */,
+				3B66A8592B7486CF0056FBE9 /* Preview Assets.xcassets */,
+				3B66A85A2B7486CF0056FBE9 /* Preview Content */,
+			);
+			path = Wilder;
+			sourceTree = "<group>";
+		};
+		3B64EBAF2B71BCA200A8BF5B /* WilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EBB02B71BCA200A8BF5B /* WilderTests.swift */,
+			);
+			path = WilderTests;
+			sourceTree = "<group>";
+		};
+		3B66A85A2B7486CF0056FBE9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3B6C0F622B75F5A200CAF7B4 /* Animals */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EBC02B71BFEC00A8BF5B /* AnimalModel.swift */,
+				3BD497D42B733660007B1B2C /* AnimalData.swift */,
+			);
+			path = Animals;
+			sourceTree = "<group>";
+		};
+		3BD497D32B73360F007B1B2C /* TAB1 - Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				3B64EBBA2B71BDFF00A8BF5B /* SpotlightView.swift */,
+				3B4F367D2B74811200B5C1B8 /* SpotlightDetailView.swift */,
+			);
+			path = "TAB1 - Spotlight";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B64EB942B71BCA000A8BF5B /* Wilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B64EBB42B71BCA200A8BF5B /* Build configuration list for PBXNativeTarget "Wilder" */;
+			buildPhases = (
+				3B64EB912B71BCA000A8BF5B /* Sources */,
+				3B64EB922B71BCA000A8BF5B /* Frameworks */,
+				3B64EB932B71BCA000A8BF5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wilder;
+			packageProductDependencies = (
+			);
+			productName = EcoSphere;
+			productReference = 3B64EB952B71BCA000A8BF5B /* Wilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B64EBAB2B71BCA200A8BF5B /* WilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B64EBB72B71BCA200A8BF5B /* Build configuration list for PBXNativeTarget "WilderTests" */;
+			buildPhases = (
+				3B64EBA82B71BCA200A8BF5B /* Sources */,
+				3B64EBA92B71BCA200A8BF5B /* Frameworks */,
+				3B64EBAA2B71BCA200A8BF5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B64EBAE2B71BCA200A8BF5B /* PBXTargetDependency */,
+			);
+			name = WilderTests;
+			productName = EcoSphereTests;
+			productReference = 3B64EBAC2B71BCA200A8BF5B /* WilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B64EB8D2B71BCA000A8BF5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					3B64EB942B71BCA000A8BF5B = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					3B64EBAB2B71BCA200A8BF5B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3B64EB942B71BCA000A8BF5B;
+					};
+				};
+			};
+			buildConfigurationList = 3B64EB902B71BCA000A8BF5B /* Build configuration list for PBXProject "Wilder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B64EB8C2B71BCA000A8BF5B;
+			productRefGroup = 3B64EB962B71BCA000A8BF5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B64EB942B71BCA000A8BF5B /* Wilder */,
+				3B64EBAB2B71BCA200A8BF5B /* WilderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B64EB932B71BCA000A8BF5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BBF11F82B8860A50041BF4F /* jaguarsound.mp3 in Resources */,
+				3BBF11FC2B8860A50041BF4F /* elephantsound.mp3 in Resources */,
+				3BBF11F92B8860A50041BF4F /* orangutan.mp3 in Resources */,
+				3BBF11F72B8860A50041BF4F /* bearsound.mp3 in Resources */,
+				3B66A85B2B7486CF0056FBE9 /* Preview Assets.xcassets in Resources */,
+				3B64EBA32B71BCA200A8BF5B /* Assets.xcassets in Resources */,
+				3BBF11FB2B8860A50041BF4F /* orangutansound.mp3 in Resources */,
+				3BBF11FA2B8860A50041BF4F /* servalsound.mp3 in Resources */,
+				3BBF11FD2B8860A50041BF4F /* lionsound.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B64EBAA2B71BCA200A8BF5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B64EB912B71BCA000A8BF5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B05956D2B84388C00DDC265 /* MatchingGameModel.swift in Sources */,
+				3B64EB9F2B71BCA000A8BF5B /* ContentView.swift in Sources */,
+				3B64EBC12B71BFEC00A8BF5B /* AnimalModel.swift in Sources */,
+				3B879B862B76870200C62C47 /* ConservationsData.swift in Sources */,
+				3B05956F2B84389300DDC265 /* AnimalCardView.swift in Sources */,
+				3BD497D52B733660007B1B2C /* AnimalData.swift in Sources */,
+				3B64EB9D2B71BCA000A8BF5B /* WilderApp.swift in Sources */,
+				3B0595712B8438AE00DDC265 /* MatchingGameView.swift in Sources */,
+				3B879B832B7686F500C62C47 /* ConservationsModel.swift in Sources */,
+				3B6C0F612B75F43D00CAF7B4 /* WGDetailView.swift in Sources */,
+				3B64EBBB2B71BDFF00A8BF5B /* SpotlightView.swift in Sources */,
+				3B4F367E2B74811200B5C1B8 /* SpotlightDetailView.swift in Sources */,
+				3B64EBBD2B71BE0A00A8BF5B /* ConservationsView.swift in Sources */,
+				3B4F36802B74818100B5C1B8 /* AnimalViewModel.swift in Sources */,
+				3B0345AD2B86FA09008B375B /* WGView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B64EBA82B71BCA200A8BF5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B64EBB12B71BCA200A8BF5B /* WilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B64EBAE2B71BCA200A8BF5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B64EB942B71BCA000A8BF5B /* Wilder */;
+			targetProxy = 3B64EBAD2B71BCA200A8BF5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3B64EBB22B71BCA200A8BF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		3B64EBB32B71BCA200A8BF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		3B64EBB52B71BCA200A8BF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wilder/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NHTWJJ4XQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wilder;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DamianPerez.Wilder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		3B64EBB62B71BCA200A8BF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Wilder/Preview Content\"";
+				DEVELOPMENT_TEAM = 7NHTWJJ4XQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Wilder;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DamianPerez.Wilder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		3B64EBB82B71BCA200A8BF5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7NHTWJJ4XQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DamianPerez.EcoSphereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wilder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wilder";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		3B64EBB92B71BCA200A8BF5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7NHTWJJ4XQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DamianPerez.EcoSphereTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wilder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wilder";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B64EB902B71BCA000A8BF5B /* Build configuration list for PBXProject "Wilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B64EBB22B71BCA200A8BF5B /* Debug */,
+				3B64EBB32B71BCA200A8BF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B64EBB42B71BCA200A8BF5B /* Build configuration list for PBXNativeTarget "Wilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B64EBB52B71BCA200A8BF5B /* Debug */,
+				3B64EBB62B71BCA200A8BF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B64EBB72B71BCA200A8BF5B /* Build configuration list for PBXNativeTarget "WilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B64EBB82B71BCA200A8BF5B /* Debug */,
+				3B64EBB92B71BCA200A8BF5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B64EB8D2B71BCA000A8BF5B /* Project object */;
+}
