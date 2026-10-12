@@ -12,7 +12,6 @@ struct WilderApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(AnimalViewModel())
         }
     }
 }

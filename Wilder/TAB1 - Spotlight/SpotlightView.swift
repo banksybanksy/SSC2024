@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct SpotlightView: View {
-    //MARK: - Body
     var body: some View {
         NavigationStack {
             GeometryReader { fullGeometry in
@@ -23,7 +22,6 @@ struct SpotlightView: View {
                             .clipped()
                             .overlay(
                                 LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.5)]), startPoint: .top, endPoint: .bottom)
-                                    .blur(radius: 0)
                             )
                             .cornerRadius(45)
                             .accessibilityLabel(AnimalOfDayViewModel.currentAnimal.name)
@@ -38,6 +36,7 @@ struct SpotlightView: View {
                         Text(AnimalOfDayViewModel.currentAnimal.name)
                             .font(.title)
                             .fontWeight(.bold)
+                            .accessibilityAddTraits(.isHeader)
                         
                         Spacer(minLength: 40)
                         

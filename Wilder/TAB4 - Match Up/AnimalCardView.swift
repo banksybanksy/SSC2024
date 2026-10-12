@@ -8,12 +8,10 @@
 
 import SwiftUI
 
-//MARK: - AnimalCardView Struct
 struct AnimalCardView: View {
     @Binding var card: MatchingCard
-    var game: MatchingGameModel
+    let game: MatchingGameModel
     
-    //MARK: - Body
     var body: some View {
         ZStack {
             //MARK: Card Front
@@ -34,7 +32,6 @@ struct AnimalCardView: View {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(card.isFaceUp ? (card.isMatched ? "\(card.animal.name), matched" : card.animal.name) : "Face-down card")
         .accessibilityAddTraits(.isButton)
-        //MARK: - Card Interaction
         .onTapGesture {
             withAnimation {
                 game.choose(card)

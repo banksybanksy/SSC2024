@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct WGView: View {
-    @EnvironmentObject var viewModel: AnimalViewModel
+    @EnvironmentObject private var viewModel: AnimalViewModel
     @State private var searchText = ""
     @State private var selectedAnimal: Animal?
     @State private var currentEmojiIndex = 0
     @State private var emojiBackgroundColor: Color = .clear
-    let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 2, on: .main, in: .common).autoconnect()
     
-    var filteredAnimals: [Animal] {
+    private var filteredAnimals: [Animal] {
         if searchText.isEmpty {
             return viewModel.animals
         } else {
@@ -46,7 +46,7 @@ struct WGView: View {
         .navigationTitle("Wild Guide")
     }
     
-    var defaultDetailView: some View {
+    private var defaultDetailView: some View {
         VStack {
             Spacer()
             if !viewModel.animals.isEmpty {
@@ -56,6 +56,7 @@ struct WGView: View {
                     .background(emojiBackgroundColor)
                     .clipShape(Circle())
                     .padding()
+                    .accessibilityHidden(true)
                     .transition(.scale.combined(with: .opacity))
                     .onReceive(timer) { _ in
                         updateEmojiAndBackground()

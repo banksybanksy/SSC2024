@@ -1,57 +1,36 @@
-# Wilder - Swift Student Challenge 2024 Submission
+# Wilder
 
-## Overview
-Wilder is an educational visionOS app designed to raise awareness about the diverse and beautiful fauna of our planet. The app aims to educate users about various animal species, their habitats, conservation statuses, and local conservation efforts in California.
+Wilder is a visionOS app for learning about wildlife, built in SwiftUI as my Swift Student Challenge 2024 submission.
 
-## Features
+## What's in it
 
-### Spotlight
-The Spotlight tab showcases a featured animal daily with beautiful imagery and essential information. Each day, a new animal is automatically selected based on the day of the year, providing users with a continuous learning experience about different species.
+The app has four tabs:
 
-### Wild Guide
-A comprehensive, searchable catalog of animals with detailed information including:
-- Classification and family
-- Ecosystem
-- Fun facts
-- Conservation status
-- Sound clips for six animals (Lion, Jaguar, Orangutan, Serval, Elephant, Grizzly Bear)
+- **Spotlight** features one animal each day. The animal is picked from the day of the year, so it changes daily with no stored state.
+- **Wild Guide** is a searchable split view of 21 animals. Each entry shows class, family, ecosystem, conservation status and fun facts. Six animals have a recorded call that plays with head-tracked spatial audio.
+- **Conservations** lists 12 California conservation centers. A segmented control filters them by Bay Area or Southern California.
+- **Spotter** is a timed emoji memory game. Twelve face-down cards hide six pairs of animals.
 
-The split-view interface allows users to browse the list while viewing detailed information about their selected animal. Before an animal is selected, the detail pane cycles through animal emoji.
+## How it works
 
-### Conservations
-Highlights conservation centers in California, with a filter for All, Bay Area and Southern California. Each entry includes:
-- Center name and image
-- Description of their conservation efforts
-- Location information
-- Website link (disabled in the submission as per Swift Student Challenge constraints)
+- **Data lives apart from the views.** `AnimalData` and `ConservationsData` are static arrays of plain structs. To add an animal, you add one entry to `AnimalData` and its emoji to the `Animal.emoji` switch. The views read from there and need no changes.
+- **Conservation status is an enum.** `ConservationStatus` is a closed set, so the color mapping in the detail views is an exhaustive `switch`. If a new status is added, the compiler flags every place that needs to handle it.
+- **The game rules live in one observable model.** `MatchingGameModel` is an `ObservableObject` that owns the cards and the matching rules. It also checks for completion. `MatchingGameView` only renders the cards and runs the timer. When the deck is dealt, animals that share an emoji are skipped, so no two pairs look the same.
 
-### Spotter (Match Up Game)
-A timed memory game: twelve face-down cards hide six pairs of animal emoji, and the player flips two at a time to find every pair.
+## Running it
 
-## Running the App
-1. Open `Wilder.xcodeproj` in Xcode 15.2 or later with the visionOS SDK installed.
-2. Select the `Wilder` scheme and an Apple Vision Pro simulator (the project targets visionOS 1.0).
-3. Build and run (⌘R). Everything is bundled locally; no network connection is needed.
+1. Open `Wilder.xcodeproj` in Xcode.
+2. Select the `Wilder` scheme and an Apple Vision Pro simulator.
+3. Build and run (⌘R).
 
-## Design Philosophy
-The app was designed with several key principles in mind:
+Requirements (inferred from the project file): Xcode 15.2 or later with the visionOS SDK; the deployment target is visionOS 1.0.
 
-1. **Educational Value**: Providing accurate and engaging information about wildlife
-2. **Accessibility**: Creating an intuitive interface that works for users of all ages
-3. **Visual Appeal**: Using high-quality images and a clean, modern UI to showcase the beauty of wildlife
-4. **Engagement**: Incorporating interactive elements like the daily spotlight and matching game
-5. **Conservation Awareness**: Highlighting conservation statuses and local conservation efforts
+Everything is bundled locally, so no network connection is needed.
 
-## Technical Implementation
-- Built with SwiftUI for a modern, responsive interface
-- Utilizes environment objects for state management across the app
-- Implements custom animations and transitions for a polished user experience
-- Features a data-driven architecture with separate model, view, and data files
-- Uses Swift's strong type system with enums for conservation statuses
+## Challenge constraints
 
-## Inspiration
-This project was inspired by Apple's environmental conservation efforts and aims to contribute to raising awareness about wildlife conservation through education and engagement.
+The Swift Student Challenge required submissions to work offline. For that reason, the **Visit Website** buttons in Conservations are disabled. Each center's URL is still kept in `ConservationsData`.
 
----
+## Status
 
-*Submitted by Damian Perez for the Swift Student Challenge 2024*
+This is the Swift Student Challenge 2024 submission, with small fixes and cleanups made since then. It is not under active development.

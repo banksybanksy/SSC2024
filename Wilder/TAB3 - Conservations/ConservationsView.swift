@@ -4,7 +4,7 @@
 //
 //  Created by Damian Perez on 2/5/24.
 //  Abstract: View displays local conservation centers.
-/// IMPORTANT:  Challenge does not allow for submissions based WiFi, disabling Visit Website button. 
+//  The Swift Student Challenge required submissions to work offline, so Visit Website is disabled.
 //
 
 import SwiftUI
@@ -13,7 +13,6 @@ struct ConservationsView: View {
     @State private var selectedRegion = "All"
     private let regions = ["All", "Bay Area", "Southern California"]
     
-    //MARK: - Filtered list based on selected region
     private var filteredCenters: [ConservationCenter] {
         switch selectedRegion {
         case "Bay Area":
@@ -48,9 +47,8 @@ struct ConservationsView: View {
 }
 
 struct ConservationCenterView: View {
-    var conservationCenter: ConservationCenter
+    let conservationCenter: ConservationCenter
     
-    //MARK: - Body
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack {
@@ -64,7 +62,8 @@ struct ConservationCenterView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(conservationCenter.name)
                         .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.bold)
+                        .accessibilityAddTraits(.isHeader)
                     
                     Text(conservationCenter.description)
                         .font(.body)
@@ -80,7 +79,6 @@ struct ConservationCenterView: View {
             }
             .padding()
             
-            // MARK: - Visit Website Button, Disabled
             Button(action: {
                 if let url = URL(string: conservationCenter.website), UIApplication.shared.canOpenURL(url) {
                     UIApplication.shared.open(url, options: [:])
@@ -90,7 +88,7 @@ struct ConservationCenterView: View {
                     .fontWeight(.medium)
                     .frame(maxWidth: .infinity)
             }
-            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/) // Due to SSC constrants, disabled
+            .disabled(true) // Offline-only requirement of the Swift Student Challenge
             .hoverEffect()
             .padding()
         }
