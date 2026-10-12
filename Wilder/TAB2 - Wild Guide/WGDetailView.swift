@@ -36,6 +36,7 @@ struct WGDetailView: View {
                             .scaledToFit()
                             .clipShape(Circle())
                             .frame(width: 300, height: 250)
+                            .accessibilityLabel(animal.name)
                         
                         VStack(alignment: .leading, spacing: 5) {
                             //MARK: - Animal Attributes

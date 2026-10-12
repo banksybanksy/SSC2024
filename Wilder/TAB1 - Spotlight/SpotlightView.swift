@@ -26,6 +26,7 @@ struct SpotlightView: View {
                                     .blur(radius: 0)
                             )
                             .cornerRadius(45)
+                            .accessibilityLabel(AnimalOfDayViewModel.currentAnimal.name)
                             .padding(5)
                     }
                     .frame(width: fullGeometry.size.width)
@@ -67,7 +68,7 @@ struct SpotlightView: View {
 //MARK: - Date Extension
 extension Date {
     var dayOfYear: Int {
-        return Calendar.current.ordinality(of: .day, in: .year, for: self)!
+        return Calendar.current.ordinality(of: .day, in: .year, for: self) ?? 1
     }
 }
 

@@ -1,7 +1,7 @@
 # Wilder - Swift Student Challenge 2024 Submission
 
 ## Overview
-Wilder is an educational iOS application designed to raise awareness about the diverse and beautiful fauna of our planet. The app aims to educate users about various animal species, their habitats, conservation statuses, and local conservation efforts in California.
+Wilder is an educational visionOS app designed to raise awareness about the diverse and beautiful fauna of our planet. The app aims to educate users about various animal species, their habitats, conservation statuses, and local conservation efforts in California.
 
 ## Features
 
@@ -14,19 +14,24 @@ A comprehensive, searchable catalog of animals with detailed information includi
 - Ecosystem
 - Fun facts
 - Conservation status
-- Interactive emoji representations
+- Sound clips for six animals (Lion, Jaguar, Orangutan, Serval, Elephant, Grizzly Bear)
 
-The split-view interface allows users to browse the list while viewing detailed information about their selected animal.
+The split-view interface allows users to browse the list while viewing detailed information about their selected animal. Before an animal is selected, the detail pane cycles through animal emoji.
 
 ### Conservations
-Highlights conservation centers in California, organized by region (Bay Area and Southern California). Each entry includes:
+Highlights conservation centers in California, with a filter for All, Bay Area and Southern California. Each entry includes:
 - Center name and image
 - Description of their conservation efforts
 - Location information
 - Website link (disabled in the submission as per Swift Student Challenge constraints)
 
 ### Spotter (Match Up Game)
-An interactive game that challenges users to match animal sounds with the correct species, making learning engaging and fun.
+A timed memory game: twelve face-down cards hide six pairs of animal emoji, and the player flips two at a time to find every pair.
+
+## Running the App
+1. Open `Wilder.xcodeproj` in Xcode 15.2 or later with the visionOS SDK installed.
+2. Select the `Wilder` scheme and an Apple Vision Pro simulator (the project targets visionOS 1.0).
+3. Build and run (⌘R). Everything is bundled locally; no network connection is needed.
 
 ## Design Philosophy
 The app was designed with several key principles in mind:

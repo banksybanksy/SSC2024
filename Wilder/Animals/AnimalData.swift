@@ -138,7 +138,7 @@ struct AnimalData {
             "Zebra stripes are thought to serve as camouflage and to confuse predators during a chase.",
             "No two zebras have the same stripe pattern, making each individual unique.",
             "Zebras have excellent eyesight and hearing, relying on these senses to alert them to predators.",
-            "They are very social animals and form strongbonds within their herds, known as 'zeal.'"
+            "They are very social animals and form strong bonds within their herds, known as 'zeal.'"
         ], conservationStatus: .someEndangered, soundFileName: "notRecorded", description: "Zebras are African equines known for their distinctive black-and-white striped patterns. Each individual's stripes are unique, and they are social animals that live in herds."),
         Animal(name: "Bontebok", image: "bontebok", animalClass: "Mammalia", family: "Bovidae", ecosystem: "Fynbos in South Africa", funFacts: [
             "Bonteboks were once considered one of the rarest antelopes, with numbers as low as 17 individuals in the wild.",

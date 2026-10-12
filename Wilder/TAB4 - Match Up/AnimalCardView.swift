@@ -31,6 +31,9 @@ struct AnimalCardView: View {
         .aspectRatio(2/3, contentMode: .fit)
         .opacity(card.isMatched ? 0.5 : 1.0)
         .modifier(ConditionalHoverEffect(condition: !card.isMatched))
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(card.isFaceUp ? (card.isMatched ? "\(card.animal.name), matched" : card.animal.name) : "Face-down card")
+        .accessibilityAddTraits(.isButton)
         //MARK: - Card Interaction
         .onTapGesture {
             withAnimation {

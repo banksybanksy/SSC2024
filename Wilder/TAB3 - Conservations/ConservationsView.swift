@@ -59,6 +59,7 @@ struct ConservationCenterView: View {
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                     .frame(width: 150, height: 150)
+                    .accessibilityLabel("\(conservationCenter.name) logo")
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text(conservationCenter.name)
