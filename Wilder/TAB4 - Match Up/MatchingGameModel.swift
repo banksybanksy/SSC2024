@@ -36,7 +36,7 @@ class MatchingGameModel: ObservableObject {
             
             cards[chosenIndex].isFaceUp = true
             
-            if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
+            if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard, potentialMatchIndex != chosenIndex {
                 if cards[chosenIndex].animal.name == cards[potentialMatchIndex].animal.name {
                     cards[chosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
@@ -56,7 +56,7 @@ class MatchingGameModel: ObservableObject {
     
     //MARK: - Game Management
     private func flipDownUnmatched() {
-        for index in cards.indices where !cards[index].isMatched {
+        for index in cards.indices where !cards[index].isMatched && index != indexOfTheOneAndOnlyFaceUpCard {
             cards[index].isFaceUp = false
         }
     }
@@ -71,7 +71,9 @@ class MatchingGameModel: ObservableObject {
         gameFinished = false
         indexOfTheOneAndOnlyFaceUpCard = nil
         
-        let selectedAnimals = AnimalData.animals.shuffled().prefix(6)
+        // Skip animals that share an emoji (Jaguar/Serval, Gerenuk/Tasmanian Devil) so no two pairs look alike
+        var usedEmojis = Set<String>()
+        let selectedAnimals = AnimalData.animals.shuffled().filter { usedEmojis.insert($0.emoji).inserted }.prefix(6)
         for animal in selectedAnimals {
             let card1 = MatchingCard(animal: animal)
             let card2 = MatchingCard(animal: animal)

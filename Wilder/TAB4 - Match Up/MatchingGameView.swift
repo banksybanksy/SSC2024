@@ -90,13 +90,6 @@ struct MatchingGameView: View {
                 Text("Elapsed: \(formattedTime)")
                     .font(.headline)
                     .padding()
-                    .onReceive(timer) { _ in
-                        if !game.gameFinished {
-                            timeElapsed += 1
-                        } else {
-                            showAlert = true
-                        }
-                    }
             }
             
             ScrollView {
@@ -110,6 +103,13 @@ struct MatchingGameView: View {
                     }
                 }
                 .padding()
+            }
+        }
+        .onReceive(timer) { _ in
+            if !game.gameFinished {
+                timeElapsed += 1
+            } else {
+                showAlert = true
             }
         }
     }

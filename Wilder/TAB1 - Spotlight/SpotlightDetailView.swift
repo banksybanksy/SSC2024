@@ -26,6 +26,7 @@ struct SpotlightDetailView: View {
                                 .scaledToFit()
                                 .clipShape(Circle())
                                 .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3)
+                                .accessibilityLabel(animal.name)
                                 .offset(x: imageOffset ?? geometry.size.width / 2) 
                                 .onAppear {
                                     withAnimation(.easeOut(duration: 1)) {
