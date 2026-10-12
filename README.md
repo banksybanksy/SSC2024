@@ -13,7 +13,7 @@ The app has four tabs:
 
 ## How it works
 
-- **Data lives apart from the views.** `AnimalData` and `ConservationsData` are static arrays of plain structs. To add an animal, you add one entry to `AnimalData` and an emoji in `Animal.emoji`. No view code changes.
+- **Data lives apart from the views.** `AnimalData` and `ConservationsData` are static arrays of plain structs. To add an animal, you add one entry to `AnimalData` and its emoji to the `Animal.emoji` switch. The views read from there and need no changes.
 - **Conservation status is an enum.** `ConservationStatus` is a closed set, so the color mapping in the detail views is an exhaustive `switch`. If a new status is added, the compiler flags every place that needs to handle it.
 - **The game rules live in one observable model.** `MatchingGameModel` is an `ObservableObject` that owns the cards and the matching rules. It also checks for completion. `MatchingGameView` only renders the cards and runs the timer. When the deck is dealt, animals that share an emoji are skipped, so no two pairs look the same.
 
