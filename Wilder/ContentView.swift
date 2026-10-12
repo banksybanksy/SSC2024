@@ -3,13 +3,12 @@
 //  Wilder
 //
 //  Created by Damian Perez on 2/5/24.
-//  Abstract: The main tab navigation of the app, dynamically adjusting navigation titles based on active tab selection.
+//  Abstract: Root tab view for Spotlight, Wild Guide, Conservations and Spotter.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         TabView {
             NavigationStack {
@@ -17,7 +16,7 @@ struct ContentView: View {
             }
             .tabItem {
                 Label("Spotlight", systemImage: "rays")
-            }            
+            }
             
             NavigationStack {
                 WGView()

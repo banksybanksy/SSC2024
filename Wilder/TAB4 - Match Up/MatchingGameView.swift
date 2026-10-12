@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct MatchingGameView: View {
-    @StateObject var game = MatchingGameModel()
+    @StateObject private var game = MatchingGameModel()
     @State private var timeElapsed = 0
     @State private var gameStarted = false
     @State private var showAlert = false
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
@@ -48,16 +48,18 @@ struct MatchingGameView: View {
     }
     
     //MARK: - Introductory View
-    var introductoryView: some View {
+    private var introductoryView: some View {
         VStack(spacing: 20) {
             Text("Up for a Memory Game?")
                 .font(.largeTitle)
                 .fontWeight(.bold)
+                .accessibilityAddTraits(.isHeader)
 
             VStack(alignment: .center, spacing: 8) {
                 ForEach(bulletPoints.indices, id: \.self) { index in
                     HStack {
                         Text("•")
+                            .accessibilityHidden(true)
                         Text(bulletPoints[index])
                     }
                     .font(.body)
@@ -84,7 +86,7 @@ struct MatchingGameView: View {
     ]
     
     //MARK: - Game View
-    var gameView: some View {
+    private var gameView: some View {
         VStack {
             if !game.gameFinished {
                 Text("Elapsed: \(formattedTime)")
@@ -115,14 +117,14 @@ struct MatchingGameView: View {
     }
     
     //MARK: - Helper Methods
-    func restartGame() {
+    private func restartGame() {
         gameStarted = false
         game.resetGame()
         timeElapsed = 0
     }
     
     //MARK: - Time Formatting
-    var formattedTime: String {
+    private var formattedTime: String {
         let minutes = (timeElapsed % 3600) / 60
         let seconds = timeElapsed % 60
         var timeComponents = [String]()

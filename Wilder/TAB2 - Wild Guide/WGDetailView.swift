@@ -10,27 +10,23 @@ import SwiftUI
 import AVFoundation
 
 struct WGDetailView: View {
-    var animal: Animal
+    let animal: Animal
     @State private var audioPlayer: AVAudioPlayer?
     
-    //MARK: - Body
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(spacing: 10) {
-                //MARK: - Animal Details
-                
                 VStack(spacing: 20) {
-                    //MARK: - Animal Title
                     Text(animal.name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
+                        .accessibilityAddTraits(.isHeader)
                         .padding(.top, -100)
-                        
+                    
                     Spacer()
                     
                     HStack {
-                        //MARK: - Animal Image
                         Image(animal.image)
                             .resizable()
                             .scaledToFit()
@@ -39,7 +35,6 @@ struct WGDetailView: View {
                             .accessibilityLabel(animal.name)
                         
                         VStack(alignment: .leading, spacing: 5) {
-                            //MARK: - Animal Attributes
                             Text("Class: \(animal.animalClass)").font(.subheadline).fontWeight(.medium)
                             Text("Family: \(animal.family)").font(.subheadline).fontWeight(.medium)
                             Text("Ecosystem: \(animal.ecosystem)").font(.subheadline).fontWeight(.medium)
@@ -57,7 +52,6 @@ struct WGDetailView: View {
                                 .fontWeight(.medium)
                                 .foregroundColor(statusColor(for: animal.conservationStatus))
                             
-                            //MARK: - Sound Playback
                             if animal.soundFileName != "notRecorded" {
                                 Button("Listen to \(animal.name)") {
                                     playSound(for: animal)
@@ -71,10 +65,10 @@ struct WGDetailView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                     
-                    //MARK: - Fun Facts
                     Text("Fun Facts")
                         .font(.title3)
                         .fontWeight(.semibold)
+                        .accessibilityAddTraits(.isHeader)
                         .frame(maxWidth: .infinity, alignment: .leading)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
@@ -117,7 +111,6 @@ struct WGDetailView: View {
     private func stopSound() {
         audioPlayer?.stop()
     }
-    
     
     //MARK: - Audio Configuration, Spatial Audio
     private func configureAudioExperience(for presentation: Presentation) {

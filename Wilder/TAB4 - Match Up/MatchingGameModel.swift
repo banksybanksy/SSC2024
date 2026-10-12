@@ -23,10 +23,6 @@ class MatchingGameModel: ObservableObject {
         }
     }
     
-    var shouldDisableCardInteraction: Bool {
-        cards.filter({ $0.isFaceUp && !$0.isMatched }).count >= 2
-    }
-    
     //MARK: - Choosing a Card
     func choose(_ card: MatchingCard) {
         if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }),

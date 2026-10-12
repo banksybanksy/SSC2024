@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct SpotlightDetailView: View {
-    var animal: Animal
+    let animal: Animal
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var imageOffset: CGFloat? = nil
     @State private var textOpacity: Double = 0
     
@@ -29,14 +30,21 @@ struct SpotlightDetailView: View {
                                 .accessibilityLabel(animal.name)
                                 .offset(x: imageOffset ?? geometry.size.width / 2) 
                                 .onAppear {
-                                    withAnimation(.easeOut(duration: 1)) {
-                                        // Move the image to its left position
-                                        imageOffset = -(geometry.size.width * 0.05) // Adjust according to your layout
-                                    }
+                                    let restingOffset = -(geometry.size.width * 0.05)
                                     
-                                    withAnimation(.easeIn(duration: 1).delay(1)) {
-                                        // Fade in the text after the image animation completes
-                                        textOpacity = 1
+                                    // With Reduce Motion on, skip the slide-in and keep a short fade.
+                                    if reduceMotion {
+                                        imageOffset = restingOffset
+                                        withAnimation(.easeIn(duration: 0.3)) {
+                                            textOpacity = 1
+                                        }
+                                    } else {
+                                        withAnimation(.easeOut(duration: 1)) {
+                                            imageOffset = restingOffset
+                                        }
+                                        withAnimation(.easeIn(duration: 1).delay(1)) {
+                                            textOpacity = 1
+                                        }
                                     }
                                 }
                             
@@ -44,6 +52,7 @@ struct SpotlightDetailView: View {
                                 Text(animal.name)
                                     .font(.title)
                                     .fontWeight(.bold)
+                                    .accessibilityAddTraits(.isHeader)
                                     .opacity(textOpacity)
                                 
                                 Text("Class: \(animal.animalClass)")
